@@ -79,7 +79,7 @@ async function main() {
     job.public.name = "mandelbrot set, nodejs";
 
     // SKIP IF: you don't need a Compute Group
-    //job.computeGroups = [{ joinKey: "", joinSecret: "" }]
+    job.computeGroups = [{ joinKey: "queens", joinSecret: "queens" }]
 
     const ks = await wallet.get(); /* usually loads ~/.dcp/default.keystore */
     job.setPaymentAccountKeystore(ks);
